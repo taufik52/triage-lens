@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "@forge/api": "^5.3.0",
+    "@forge/bridge": "^5.0.0",
+    "@forge/react": "^11.0.0",
+    "@forge/resolver": "^1.6.0",
+    "react": "^18.2.0"
+  },
+  "description": "Triage Lens for Jira \u2014 summarises an issue, suggests a priority and flags possible duplicates (local heuristics; optional LLM slot).",
+  "license": "MIT",
+  "name": "triage-lens",
+  "private": true,
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "version": "1.0.0"
+}

@@ -1,0 +1,22 @@
+modules:
+  jira:issuePanel:
+    - key: triage-lens-panel
+      function: main
+      title: Triage Lens
+      icon: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
+  function:
+    - key: main
+      handler: index.run
+app:
+  # PLACEHOLDER — replaced by `forge register` / `forge deploy` once an
+  # Atlassian account is connected. Do not ship this id.
+  id: ari:cloud:ecosystem::app/00000000-0000-0000-0000-000000000000
+  name: triage-lens
+  runtime:
+    name: nodejs20.x
+permissions:
+  scopes:
+    # Read issue fields + JQL search (duplicate candidates)
+    - read:jira-work
+    # Apply the suggested priority back to the issue (user confirms in UI)
+    - write:jira-work
