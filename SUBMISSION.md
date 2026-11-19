@@ -96,25 +96,26 @@ the core features. The optional LLM summary needs `LLM_API_KEY` set via
 
 ## Repository
 
-TODO — no public repo exists yet. The code lives in
-`~/workspace/codegeist/triage-lens/` (manifest, `src/`, `test/`).
-If a repo is published before submitting, paste its URL here and note
-that the app was built during the Codegeist 2026 submission period
-(27 Oct – 22 Dec 2026).
+**https://github.com/taufik52/triage-lens** — public repo, created 13 Nov 2026, commit `6d5d153` (verified 15 Nov 2026). The app was built during the Codegeist 2026 submission period (27 Oct – 22 Dec 2026).
 
 ## What was verified before submitting (checklist)
 
-- [x] Unit tests: 18/18 pass (`npm test` in `triage-lens/`, 13 Nov 2026 —
-  15 heuristic tests + 3 JQL route regression tests; was 15/15 on 12 Nov)
+- [x] Unit tests: 18/18 pass (`npm test` in `triage-lens/`, re-verified
+  19 Nov 2026: 18 pass, 0 fail, ~286 ms — 15 heuristic tests + 3 JQL
+  route regression tests)
 - [x] JQL double-encoding bug fixed 13 Nov 2026 (`src/index.jsx`: raw JQL
   passed to Forge `route`, which encodes once; previously
   `encodeURIComponent` + `route` = `%2520`, Jira would reject every
   duplicate search and the list would always be empty)
-- [x] Forge CLI 15.1.0 installed and working (`forge --version`)
+- [x] Forge CLI 15.1.0 installed and working (`forge --version`,
+  re-verified 19 Nov 2026 with `LD_PRELOAD` shim)
 - [x] `npm install` + `package-lock.json` committed (done 12 Nov 2026:
   554 packages, resolved @forge/api 5.3.0, @forge/bridge 5.17.0,
   @forge/react 11.17.0, @forge/resolver 1.8.0, react 18.3.1)
-- [x] Lint client-side via `@forge/lint` (0 errors, 0 warnings — see DEPLOY.md)
+- [x] Lint client-side via `@forge/lint` (0 errors, 0 warnings, 0 approvals
+  — re-verified 19 Nov 2026; MUST run with the shim:
+  `LD_PRELOAD=~/workspace/codegeist/tools/nochown.so node lint-client-side.cjs`,
+  otherwise it throws EPERM chown on the VM — see DEPLOY.md)
 - [ ] `forge lint` via CLI (needs login)
 - [ ] `forge deploy` succeeds (needs login)
 - [ ] App installed on the dev Jira site; panel visible on a real issue
@@ -129,5 +130,4 @@ that the app was built during the Codegeist 2026 submission period
    only Cipoz can provide these. Without login, `forge lint` / `deploy` /
    `install` all fail at the auth precondition (proven 12 Nov 2026).
 2. **Installation link and demo video** can only be produced after (1).
-3. **No GitHub repo yet** — creating/pushing one is a Cipoz step
-   (do not create it from the agent side without his go-ahead).
+3. **GitHub repo — DONE.** https://github.com/taufik52/triage-lens is public since 13 Nov 2026 (verified 15 Nov 2026).

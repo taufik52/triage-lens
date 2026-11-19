@@ -7,21 +7,24 @@ about, how urgent is it, is it a duplicate, and what should it be labelled?*
 Built for **Codegeist 2026** (Devpost: codegeist2026.devpost.com),
 category **Apps for Software Teams**.
 
-> Status (13 Nov 2026): code complete, unit tests 18/18 green (15 heuristik
-> + 3 regresi JQL, lihat di bawah). **Not yet deployed** — deployment needs
+> Status (19 Nov 2026, re-verified): code complete, unit tests 18/18 green
+> (15 heuristik + 3 regresi JQL, lihat di bawah), lint client-side 0 errors /
+> 0 warnings, Forge CLI 15.1.0 working. **Not yet deployed** — deployment needs
 > an Atlassian account + API token + free Cloud Developer License (see
 > [DEPLOY.md](DEPLOY.md) and [CIPOZ-STEPS.md](CIPOZ-STEPS.md)). The app id
 > in `manifest.yml` is still the placeholder
 > `00000000-0000-0000-0000-000000000000` until `forge register` /
-> `forge deploy` runs.
+> `forge deploy` runs. Public repo: https://github.com/taufik52/triage-lens
+> (commit `6d5d153`, in sync).
 >
 > 13 Nov 2026 fix: the duplicate search double-encoded its JQL
 > (`encodeURIComponent` + Forge `route` tag) so Jira would have rejected
 > every search and the duplicate list would always come back empty. Fixed
 > in `src/index.jsx` (raw JQL passed to `route`) + regression tests in
-> `test/route.test.js` (18/18 green). Lint client-side re-verified
-> 0 errors / 0 warnings. Local git repo initialised, ready to push once
-> Cipoz creates the GitHub repo.
+> `test/route.test.js` (18/18 green, re-verified 19 Nov 2026). Lint client-side
+> re-verified 0 errors / 0 warnings on 19 Nov 2026 (run with the
+> `LD_PRELOAD` shim, otherwise EPERM chown on this VM — see DEPLOY.md).
+> Public GitHub repo live since 13 Nov 2026.
 
 ## What it does
 
