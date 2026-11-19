@@ -8,9 +8,7 @@ modules:
     - key: main
       handler: index.run
 app:
-  # PLACEHOLDER — replaced by `forge register` / `forge deploy` once an
-  # Atlassian account is connected. Do not ship this id.
-  id: ari:cloud:ecosystem::app/00000000-0000-0000-0000-000000000000
+  id: ari:cloud:ecosystem::app/1740e52b-89b0-4be6-b938-bd3e0450e9ef
   name: triage-lens
   runtime:
     name: nodejs20.x
