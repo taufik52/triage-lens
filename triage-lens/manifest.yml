@@ -10,7 +10,7 @@ modules:
 app:
   id: ari:cloud:ecosystem::app/1740e52b-89b0-4be6-b938-bd3e0450e9ef
   runtime:
-    name: nodejs20.x
+    name: nodejs22.x
 permissions:
   scopes:
     # Read issue fields + JQL search (duplicate candidates)
