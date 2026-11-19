@@ -2,6 +2,10 @@ modules:
   jira:issuePanel:
     - key: triage-lens-panel
       function: main
+      # UI Kit 2 REQUIRES `render: native` — without it Forge treats the
+      # module as deprecated UI Kit 1 and the @forge/react bundle never
+      # renders (panel stuck on skeleton, backend never invoked).
+      render: native
       title: Triage Lens
       icon: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
   function:
