@@ -8,6 +8,14 @@ modules:
       render: native
       title: Triage Lens
       icon: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
+  # DIAGNOSTIC MODULE (added 19 Nov 18:59): same UI as a full page, to test
+  # whether ANY Forge module loads on this site. Remove after the test.
+  jira:globalPage:
+    - key: triage-lens-global
+      function: main
+      render: native
+      title: Triage Lens
+      icon: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
   function:
     - key: main
       handler: index.run
